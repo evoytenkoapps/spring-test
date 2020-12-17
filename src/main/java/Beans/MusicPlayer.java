@@ -9,7 +9,7 @@ public class MusicPlayer implements LifeCycle {
         this.music = music;
     }
 
-    public MusicPlayer() {
+    private MusicPlayer() {
     }
 
     public void playMusic() {
@@ -25,7 +25,7 @@ public class MusicPlayer implements LifeCycle {
     }
 
     public String getName() {
-        return name;
+        return this.music.toString();
     }
 
     public void onInit() {

@@ -13,7 +13,7 @@
           class="Beans.RockMusic"
           init-method="onInit"
           destroy-method="onDestroy"
-          scope="singleton">
+          factory-method="getInstanse">
     </bean>
 
     <bean id="musicPlayer"
