@@ -1,5 +1,8 @@
 package Beans;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class MusicPlayer implements LifeCycle {
     private Music music;
     private String name;

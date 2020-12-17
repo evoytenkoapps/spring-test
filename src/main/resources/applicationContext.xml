@@ -7,19 +7,6 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
-
-    <bean id="musicBean"
-          class="Beans.RockMusic"
-          init-method="onInit"
-          destroy-method="onDestroy"
-          factory-method="getInstanse">
-    </bean>
-
-    <bean id="musicPlayer"
-          class="Beans.MusicPlayer">
-        <property name="music" ref="musicBean"/>
-        <property name="name" value="${musicPlayer.name}"/>
-    </bean>
+    <context:component-scan base-package="./"/>
 
 </beans>

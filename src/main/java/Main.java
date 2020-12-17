@@ -7,10 +7,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String... args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-        System.out.println(musicPlayer.getName());
-        // RockMusic rockMusic = context.getBean("musicBean", RockMusic.class);
-
+        // MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+        RockMusic rockMusic = context.getBean("rockMusic", RockMusic.class);
+        System.out.println(rockMusic.getSong());
     }
 
 }
