@@ -2,6 +2,7 @@ package Beans;
 
 public class MusicPlayer {
     private Music music;
+    private String name;
 
     // IoC
     public MusicPlayer(Music music) {
@@ -17,6 +18,14 @@ public class MusicPlayer {
 
     public void setMusic(Music music) {
         this.music = music;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 }
 
