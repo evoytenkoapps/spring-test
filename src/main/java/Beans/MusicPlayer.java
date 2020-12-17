@@ -1,6 +1,6 @@
 package Beans;
 
-public class MusicPlayer {
+public class MusicPlayer implements LifeCycle {
     private Music music;
     private String name;
 
@@ -26,6 +26,14 @@ public class MusicPlayer {
 
     public String getName() {
         return name;
+    }
+
+    public void onInit() {
+        System.out.println("onInit " + this);
+    }
+
+    public void onDestroy() {
+        System.out.println("onDestroy " + this);
     }
 }
 
