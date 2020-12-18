@@ -1,6 +1,7 @@
 package Beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -21,8 +22,10 @@ public class MusicPlayer implements LifeCycle {
     }
 
     @Autowired
-    public void setMusic(RockMusic music) {
-        this.music = music;
+
+
+    public void setMusic(@Qualifier("classicalMusic") Music music1, @Qualifier("rockMusic") Music music2) {
+        this.music = music1;
     }
 
     public void setName(String name) {
